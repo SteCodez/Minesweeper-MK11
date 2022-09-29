@@ -1,38 +1,40 @@
 import random
 import os
-
-def field_layout(): #Function for printing the layout by diplaying a grid in each iteration
-    
-    global mine_value
+ 
+def print_mines_layout():
+ 
+    global mine_values
     global n
+ 
+    print()
     
     st = "   "
     for i in range(n):
         st = st + "     " + str(i + 1)
-    print(st)
-    
+    print(st)   
+ 
     for r in range(n):
         st = "     "
         if r == 0:
             for col in range(n):
                 st = st + "______" 
             print(st)
-            
+ 
         st = "     "
         for col in range(n):
             st = st + "|     "
         print(st + "|")
-        
+         
         st = "  " + str(r + 1) + "  "
         for col in range(n):
-            st = st + "|  " + str(mine_value[r][col]) + "  "
-        print(st + "|")
-        
-        st = "  " + str(r + 1) + "  "
+            st = st + "|  " + str(mine_values[r][col]) + "  "
+        print(st + "|") 
+ 
+        st = "     "
         for col in range(n):
-            st = st + "|  " + str(mine_value[r][col]) + "  "
-        print(st + "|")
-        
+            st = st + "|_____"
+        print(st + '|')
+ 
     print()
 
 def mine_placer():
