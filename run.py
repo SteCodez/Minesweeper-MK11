@@ -161,3 +161,18 @@ def mine_displayer():
         for col in range(n):
             if numbers[r][col] == -1:
                 mine_value[r][col] = 'M'
+                
+if __name__ == "__main__":
+    n = 8
+    no_of_mines = 8
+    
+    numbers = [[0 for y in range(n)] for x in range(n)] 
+    mine_values = [[' ' for y in range(n)] for x in range(n)]
+    flags = []
+    mine_placer()
+    set_values()
+    over = False
+    
+while not over:
+    print_mines_layout()
+    inp = input("Enter row number followed by space and column number = ").split()
