@@ -176,3 +176,12 @@ if __name__ == "__main__":
 while not over:
     print_mines_layout()
     inp = input("Enter row number followed by space and column number = ").split()
+    
+    if len(inp) ==2:
+        try:
+            val = list(map(int, inp))
+        except ValueError:
+            clear()
+            print("Invalid input, try again!")
+            continue
+   
