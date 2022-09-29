@@ -125,5 +125,24 @@ def zero_value_check(r, col):
 
 def clear():
     os.system("clear")
-
-def 
+    """
+    this function will check the progress of the game, count all of the numbered value and and for loop
+    to check each cell in the grid.
+    """
+def check_game_progress():
+    global mine_value
+    global n
+    global no_of_mines
+    
+    count = 0
+    
+    for r in range(n):
+        for col in range(n):
+            
+            if mine_value[r][col] != ' ' and  mine_value[r][col]!= 'F':
+                count = count + 1
+    
+    if count == n * n - no_of_mines:
+        return True
+    else:
+        return False
