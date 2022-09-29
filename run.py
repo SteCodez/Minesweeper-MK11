@@ -102,3 +102,10 @@ def set_values():
                 numbers[r][col] = numbers[r][col] +1
             if col > 0 and numbers[r][col-1] == -1:
                 numbers[r][col] = numbers[r][col] +1
+            if col < n-1 and numbers[r][col+1] == -1:
+                numbers[r][col] = numbers[r][col] +1
+            if r >0 and col > 0 and numbers[r-1][col-1] == -1:
+                numbers[r][col] = numbers[r][col] +1
+            if r > 0 and col > 0 and numbers[r+1][col+1] == -1:
+                numbers[r][col] == numbers[r][col] +1
+                
