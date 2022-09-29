@@ -88,4 +88,20 @@ def set_values():
         """
         The above statements go either + or - or both in the row and column to check in a full circle
         around each grid which should in return add 1 to every cell that is touching a mine.
-        """      
+        """
+def zero_value_check(r, col):
+    
+    global mine_value
+    global number
+    global vis
+    """
+    This function will check for zeros surrounding the chosen cell using a recursive function.
+    """
+    
+    if [r, col] not in vis:
+        vis.append([r, col])
+        
+        if numbers[r][col] == 0:
+            mine_value[r][col] = numbers[r][col]
+            
+            
