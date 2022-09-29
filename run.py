@@ -79,10 +79,13 @@ def set_values():
                 numbers[r][col] = numbers[r][col] +1
             if r >0 and col > 0 and numbers[r-1][col-1] == -1:
                 numbers[r][col] = numbers[r][col] +1
-            if r > 0 and col < n -1 and numbers[r+1][col+1] == -1:
+            if r > 0 and col < n -1 and numbers[r-1][col-1] == -1:
                 numbers[r][col] == numbers[r][col] +1
             if r < n-1 and col > 0 and numbers[r+1][col+1]== -1:
                 numbers[r][col] = numbers[r][col] +1
             if r < n-1 and col < n-1 and numbers[r+1][col+1]== -1:
                 numbers[r][col] = numbers[r][col] +1
-                
+        """
+        The above statements go either + or - or both in the row and column to check in a full circle
+        around each grid which should in return add 1 to every cell that is touching a mine.
+        """      
