@@ -104,4 +104,22 @@ def zero_value_check(r, col):
         if numbers[r][col] == 0:
             mine_value[r][col] = numbers[r][col]
             
+            if r > 0:
+                zero_value_check(r-1, col)
+            if r < n-1:
+                zero_value_check(r+1, col)
+            if col > 0:
+                zero_value_check(r, col-1)
+            if col < n-1:
+                zero_value_check(r, col+1)  
+            if r > 0 and col > 0:
+                zero_value_check(r-1, col-1)  
+            if r > 0 and col < n-1:
+                zero_value_check(r-1, col+1)
+            if r < n-1 and col > 0:
+                zero_value_check(r+1, col-1)
+            if r < n-1 and col < n-1:
+                zero_value_check(r+1, col+1)  
+        if numbers[r][col] != 0:
+            mine_value[r][col] = numbers[r][col]
             
