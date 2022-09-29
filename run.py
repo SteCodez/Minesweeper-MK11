@@ -10,7 +10,6 @@ def reset():
     print('''
 MAIN MENU
 =========
-
 -> For instructions on how to play, type 'I'
 -> To play immediately, type 'P'
 ''')
