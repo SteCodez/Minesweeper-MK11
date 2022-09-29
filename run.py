@@ -1,3 +1,5 @@
+import random
+import os
 
 def field_layout(): #Function for printing the layout by diplaying a grid in each iteration
     
