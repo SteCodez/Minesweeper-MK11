@@ -188,3 +188,15 @@ while not over:
             print("Invalid input, try again!")
             continue
     
+    elif len(inp) == 3:
+        if inp[2] != 'F' and inp[2] != 'f':
+            clear()
+            print("Invalid input, try again!")
+            continue
+        
+        try:
+            val = list(map(int, inp[:2]))
+        except ValueError:
+            clear()
+            print("Invalid input, try again!")   
+            continue
