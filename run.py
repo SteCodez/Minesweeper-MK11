@@ -176,7 +176,10 @@ if __name__ == "__main__":
 while not over:
     print_mines_layout()
     inp = input("Enter row number followed by space and column number = ").split()
-    
+    """
+    Above: The input that enters your selections into the grid.
+    Below: The try block that calls a ValueError if the input is invalid.
+    """
     if len(inp) ==2:
         try:
             val = list(map(int, inp))
@@ -184,4 +187,4 @@ while not over:
             clear()
             print("Invalid input, try again!")
             continue
-   
+    
