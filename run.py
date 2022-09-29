@@ -30,7 +30,7 @@ MAIN MENU
         
     elif choice != 'p':
         os.system('clear')
-        reset()
+        
     
     st = "   "
     for i in range(n):
