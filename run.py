@@ -146,3 +146,16 @@ def check_game_progress():
         return True
     else:
         return False
+    """
+    this funtion will display all of the mine locations, mines have been given the
+    value M for Mine.
+    """
+def mine_displayer():
+    global mine_value
+    global numbers
+    global n
+    
+    for r in range(n):
+        for col in range(n):
+            if numbers[r][col] == -1:
+                mine_value[r][col] = 'M'
