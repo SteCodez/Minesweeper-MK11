@@ -83,3 +83,13 @@ def mine_placer():
             count = count + 1
             numbers[r][col]
             
+def set_values():
+    
+    global n
+    global numbers 
+    
+    for r in range(n):
+        for col in range(n):
+            if numbers[r][col] == -1:
+                continue
+        
