@@ -87,9 +87,18 @@ def set_values():
     
     global n
     global numbers 
-    
+    """
+    below we will ad a for loop that will count each cell value and the if statements that will skip
+    through each mine if one is present
+    """
     for r in range(n):
         for col in range(n):
             if numbers[r][col] == -1:
                 continue
-        
+
+            if r > 0 and numbers[r-1][col] == -1:
+                numbers[r][col] = numbers[r][col] + 1
+            if r < n-1 and numbers[r+1][col] == -1:
+                numbers[r][col] = numbers[r][col] +1
+            if col > 0 and numbers[r][col-1] == -1:
+                numbers[r][col] = numbers[r][col] +1
