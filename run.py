@@ -1,4 +1,4 @@
-import random, os
+import random, os, time
 #Introduction
 print()
 print('A Game that starts with chance')
