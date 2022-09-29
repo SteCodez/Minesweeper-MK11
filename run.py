@@ -1,6 +1,6 @@
 import random
 import os
- 
+
 def print_mines_layout():
  
     global mine_values
@@ -173,30 +173,33 @@ if __name__ == "__main__":
     set_values()
     over = False
     
-while not over:
-    print_mines_layout()
-    inp = input("Enter row number followed by space and column number = ").split()
-    """
-    Above: The input that enters your selections into the grid.
-    Below: The try block that calls a ValueError if the input is invalid.
-    """
-    if len(inp) ==2:
-        try:
-            val = list(map(int, inp))
-        except ValueError:
-            clear()
-            print("Invalid input, try again!")
-            continue
-    
-    elif len(inp) == 3:
-        if inp[2] != 'F' and inp[2] != 'f':
-            clear()
-            print("Invalid input, try again!")
-            continue
+    while not over:
+        print_mines_layout()
+        inp = input("Enter row number followed by space and column number = ").split()
+        """
+        Above: The input that enters your selections into the grid.
+        Below: The try block that calls a ValueError if the input is invalid.
+        """
+        if len(inp) ==2:
+            try:
+                val = list(map(int, inp))
+            except ValueError:
+                clear()
+                print("Invalid input, try again!")
+                continue
         
-        try:
-            val = list(map(int, inp[:2]))
-        except ValueError:
-            clear()
-            print("Invalid input, try again!")   
-            continue
+        elif len(inp) == 3:
+            if inp[2] != 'F' and inp[2] != 'f':
+                clear()
+                print("Invalid input, try again!")
+                continue
+            
+            try:
+                val = list(map(int, inp[:2]))
+            except ValueError:
+                clear()
+                print("Invalid input, try again!")   
+                continue
+            
+            r = val[0]-1
+            col = val
