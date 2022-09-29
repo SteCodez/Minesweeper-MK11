@@ -44,4 +44,21 @@ def field_layout(): #Function for printing the layout by diplaying a grid in eac
             for col in range(n):
                 st = st + "______" 
             print(st)
-    
+            
+        st = "     "
+        for col in range(n):
+            st = st + "|     "
+        print(st + "|")
+        
+        st = "  " + str(r + 1) + "  "
+        for col in range(n):
+            st = st + "|  " + str(mine_values[r][col]) + "  "
+        print(st + "|")
+        
+        st = "  " + str(r + 1) + "  "
+        for col in range(n):
+            st = st + "|  " + str(mine_values[r][col]) + "  "
+        print(st + "|")
+        
+    print()
+        
