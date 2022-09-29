@@ -26,7 +26,7 @@ MAIN MENU
         
     elif choice != 'p':
         os.system('clear')
-reset()
+    reset()
 
 def field_layout(): #Function for printing the layout by diplaying a grid in each iteration
     
@@ -60,5 +60,5 @@ def field_layout(): #Function for printing the layout by diplaying a grid in eac
             st = st + "|  " + str(mine_values[r][col]) + "  "
         print(st + "|")
         
-    print()
+    print(field_layout)
         
